@@ -45,4 +45,3 @@ end
 
 user_input
 
-printer(students)
