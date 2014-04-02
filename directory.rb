@@ -13,7 +13,7 @@ def user_input
 	name = gets.chomp
 	students = []
 		while !name.empty? do
-		students << {:name => name, :cohort => :march}
+		students << {:name => name, :cohort => "March"}
 		name = gets.chomp
 		end
 	printer(students)
