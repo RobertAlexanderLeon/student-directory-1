@@ -1,47 +1,42 @@
 
 
-
 =begin
+
 students = ["Dr. Hannibal Lecter", "Darth Vader", "Nurse Ratched", "Michael Corleone", "Alex De Large", "The Alien", "Terminator", "Freddy Krueger", "The Joker",]
 
 students.each {|name| puts name}
 print "Overall, we have #{students.count} great students"
 =end
+
 def user_input
-	puts "Please enter the names of the students"
-	puts "To finish, just hit return twice"
-	students = []
+	print "Hi, please enter students!\n"
 	name = gets.chomp
-			while !name.empty? do 
-			students << {:name => name, :cohort => :March}
-			name = gets.chomp
-			end
-	students
+	students = []
+		while !name.empty? do
+		students << {:name => name, :cohort => :march}
+		name = gets.chomp
+		end
+	printer(students)
 end
 
-students = user_input
-
-def print_mycohort
-	puts "The students of my cohort at Makers Academy"
-	puts "__________"
+def student_list
+	print "Students list: \n______________\n"
 end
+
 
 def printer(students)
 	x = 1
-	students.each {|name| print "#{x} #{students[:name]}\n" ; x += 1}
+	student_list
+	students.each {|name, cohort| print "#{x}. #{name[:name]} from the #{name[:cohort].capitalize} cohort\n" ; x += 1}
+	print_footer(students)
 end
 
-def print_footer(x)
+def print_footer(students)
 	
-	puts "_________________"
-	puts "Overall, we have #{x.count} great students"
+	print "_________________\n"
+	print "Overall, we have #{students.count} great students"
 end
 
 
 user_input
 
-print_mycohort
-
-printer(students)
-
-print_footer(students)
