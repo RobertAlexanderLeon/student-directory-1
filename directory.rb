@@ -25,13 +25,13 @@ end
 
 
 def printer(students)
-	x = 1
+	x = 0
 	student_list
-	students.each do |name| 
-	if name[:name].downcase.chars.length < 12 then print "#{x}. #{name[:name]} from the #{name[:cohort].capitalize} cohort\n"
+	while x < students.count
+	print "#{x + 1}. #{students[x][:name]} from the #{students[x][:cohort].capitalize} cohort\n"
 	x += 1
 	end
-	end
+
 	print_footer(students)
 end
 
@@ -45,3 +45,4 @@ end
 
 user_input
 
+printer(students)
