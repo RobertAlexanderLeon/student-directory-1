@@ -28,7 +28,7 @@ def printer(students)
 	x = 1
 	student_list
 	students.each do |name| 
-	if name[:name].downcase.chars.first == "a" then print "#{x}. #{name[:name]} from the #{name[:cohort].capitalize} cohort\n"
+	if name[:name].downcase.chars.length < 12 then print "#{x}. #{name[:name]} from the #{name[:cohort].capitalize} cohort\n"
 	x += 1
 	end
 	end
