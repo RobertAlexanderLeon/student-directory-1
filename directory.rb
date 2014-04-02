@@ -27,9 +27,14 @@ end
 def printer(students)
 	x = 1
 	student_list
-	students.each {|name, cohort| print "#{x}. #{name[:name]} from the #{name[:cohort].capitalize} cohort\n" ; x += 1}
+	students.each do |name| 
+	if name[:name].downcase.chars.first == "a" then print "#{x}. #{name[:name]} from the #{name[:cohort].capitalize} cohort\n"
+	x += 1
+	end
+	end
 	print_footer(students)
 end
+
 
 def print_footer(students)
 	
