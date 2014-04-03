@@ -25,12 +25,9 @@ end
 
 
 def printer(students)
-	x = 1
 	student_list
-	students.each do |name| 
-	if name[:name].downcase.chars.length < 12 then print "#{x}. #{name[:name]} from the #{name[:cohort].capitalize} cohort\n"
-	x += 1
-	end
+	x = 1
+	students.select{|student| if student[:name].length <= 12 then puts "#{student[:name]} from Cohort #{student[:cohort]}" end}
 	end
 	print_footer(students)
 end
