@@ -7,21 +7,7 @@ def multiple_user_inputer(*students)
 	hobby = "placeholder"
 	answer = ""
     while !name.empty? do
-		sucky_prompts
-		single_students = {name: name, cohort: cohort, height: height, hobby: hobby}
-		students << single_students
-		puts "For list, enter: 'list' ! To continue adding user, press enter"
-		answer = gets.chomp
-		if answer.downcase == "list" ; return printer(students) end
-		
-	end
-
-	printer(students)
-	
-end
-
-def sucky_prompts
-	puts "Hey there, type your name"
+		puts "Hey there, type your name"
 		name = gets.chomp
 		puts "Put your cohort"
 		cohort = gets.chomp
@@ -29,6 +15,14 @@ def sucky_prompts
 		height = gets.chomp
 		puts "Put your hobby"
 		hobby = gets.chomp
+		single_students = {name: name, cohort: cohort, height: height, hobby: hobby}
+		students << single_students
+		puts "For list, enter: 'list' ! To continue adding user, press enter"
+		answer = gets.chomp
+		if answer.downcase == "list" ; return printer(students) end
+	end
+	printer(students)
+	
 end
 
 def user_input
