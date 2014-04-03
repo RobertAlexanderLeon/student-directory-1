@@ -25,20 +25,10 @@ end
 
 
 def printer(students)
-# <<<<<<< HEAD
-	x = 0
 	student_list
-	while x < students.count
-	print "#{x + 1}. #{students[x][:name]} from the #{students[x][:cohort].capitalize} cohort\n"
-	x += 1
-	end
-
-# =======
-	# student_list
-	# x = 1
-	# students.select{|student| if student[:name].length <= 12 then puts "#{student[:name]} from Cohort #{student[:cohort]}" end}
-# 	# end
-# >>>>>>> new
+	x = 1
+	students.select{|student| if student[:name].length <= 12 then puts "#{student[:name]} from Cohort #{student[:cohort]}" end}
+	# end
 	print_footer(students)
 end
 
