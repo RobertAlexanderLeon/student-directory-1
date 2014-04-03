@@ -19,14 +19,14 @@ def user_input
 	printer(students)
 end
 
-def student_list
+def student_list_message
 	print "Students list: \n______________\n"
 end
 
 
 def printer(students)
 	x = 0
-	student_list
+	student_list_message
 	while x < students.count
 	print "#{x + 1}. #{students[x][:name]} from the #{students[x][:cohort].capitalize} cohort\n"
 	x += 1
