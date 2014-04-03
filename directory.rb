@@ -7,17 +7,17 @@ def multiple_user_inputer(*students)
 	hobby = "placeholder"
 	answer = ""
     while !name.empty? do
-		puts "Hey there, type your name"
+		puts "Hey there, type your name".center(50)
 		name = gets.chomp
-		puts "Put your cohort"
+		puts "Put your cohort".center(50)
 		cohort = gets.chomp
-		puts "Put your height"
+		puts "Put your height".center(50)
 		height = gets.chomp
-		puts "Put your hobby"
+		puts "Put your hobby".center(50)
 		hobby = gets.chomp
 		single_students = {name: name, cohort: cohort, height: height, hobby: hobby}
 		students << single_students
-		puts "For list, enter: 'list' ! To continue adding user, press enter"
+		puts "For list, enter: 'list' ! To continue adding user, press enter".center(50)
 		answer = gets.chomp
 		if answer.downcase == "list" ; return printer(students) end
 	end
