@@ -1,12 +1,27 @@
 
+def multiple_user_inputer(*students)
+	students = []
+	name = "placeholder"
+    while !name.empty? do
+		#puts students.inspect
+		puts "Hey there, type your name"
+		name = gets.chomp
+		puts "Put your cohort"
+		cohort = gets.chomp
+		puts "Put your height"
+		height = gets.chomp
+		puts "Put your hobby"
+		hobby = gets.chomp
+		single_students = {name: name, cohort: cohort, height: height, hobby: hobby}
+		students << single_students
+		puts "For list, enter: 'list' ! To continue adding user, enter: next"
+		answer = gets.chomp
+		if answer.downcase == "list" ;return printer(students) end
+	end
 
-=begin
-
-students = ["Dr. Hannibal Lecter", "Darth Vader", "Nurse Ratched", "Michael Corleone", "Alex De Large", "The Alien", "Terminator", "Freddy Krueger", "The Joker",]
-
-students.each {|name| puts name}
-print "Overall, we have #{students.count} great students"
-=end
+	printer(students)
+	
+end
 
 def user_input
 	print "Hi, please enter students!\n"
@@ -43,5 +58,6 @@ def print_footer(students)
 end
 
 
-user_input
+#user_input
+multiple_user_inputer
 
