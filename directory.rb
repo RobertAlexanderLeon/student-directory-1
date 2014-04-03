@@ -25,6 +25,7 @@ end
 
 
 def printer(students)
+# <<<<<<< HEAD
 	x = 0
 	student_list
 	while x < students.count
@@ -32,8 +33,19 @@ def printer(students)
 	x += 1
 	end
 
+# =======
+	# student_list
+	# x = 1
+	# students.select{|student| if student[:name].length <= 12 then puts "#{student[:name]} from Cohort #{student[:cohort]}" end}
+# 	# end
+# >>>>>>> new
 	print_footer(students)
 end
+
+# student_list
+	# x = 1
+	# students.select{|student| if student[:name].length <= 12 then puts "#{student[:name]} from Cohort #{student[:cohort]}" end}
+	# end
 
 
 def print_footer(students)
